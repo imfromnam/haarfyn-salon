@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haarfyn Salon - Windhoek</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    #whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #1f2937;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+    #whatsapp-btn:hover {
+      background-color: #111827;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar with mobile menu -->
+  <nav class="bg-white shadow px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="assets/logo.png" alt="Haarfyn Logo" class="w-12 h-12 mr-2" />
+      <span class="font-bold text-xl">Haarfyn</span>
+    </div>
+    <div class="md:hidden">
+      <button id="menuBtn" class="text-black focus:outline-none text-3xl">☰</button>
+    </div>
+    <div id="menuLinks" class="hidden absolute top-16 right-4 bg-white shadow rounded-md p-4 w-40 z-50 text-sm space-y-3 md:hidden">
+      <a href="index.html" class="block hover:underline">Home</a>
+      <a href="about.html" class="block hover:underline">About Us</a>
+      <a href="https://wa.me/264817738629" class="block hover:underline" target="_blank">Book WhatsApp</a>
+    </div>
+  </nav>
+
+  <!-- Hero Content -->
+  <div class="max-w-3xl mx-auto text-center p-10">
+    <h1 class="text-4xl font-bold mb-4 text-black">Welcome to Haarfyn Salon</h1>
+    <p class="mb-4 text-gray-700">
+      Located in Windhoek, Haarfyn Salon offers professional hair and beauty services for all hair types.
+      From stylish cuts to color treatments, deep conditioning, and protective styles — we’re here to help you look and feel your best.
+    </p>
+    <p class="mb-6 text-gray-700">
+      Book now to experience expert care in a relaxed, welcoming environment.
+    </p>
+    <a href="https://wa.me/264817738629" target="_blank" class="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition">
+      Book on WhatsApp
+    </a>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/264817738629" target="_blank" id="whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat with Haarfyn Salon on WhatsApp">
+    <svg fill="white" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.52 3.48A11.934 11.934 0 0012 0C5.373 0 0 5.373 0 12c0 2.111.553 4.09 1.6 5.873L0 24l6.275-1.589A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12 0-3.197-1.245-6.207-3.48-8.52z"/>
+    </svg>
+  </a>
+
+  <!-- Simple JS for menu toggle -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menuLinks = document.getElementById('menuLinks');
+    menuBtn.addEventListener('click', () => {
+      menuLinks.classList.toggle('hidden');
+    });
+  </script>
+</body>
+  </html>
